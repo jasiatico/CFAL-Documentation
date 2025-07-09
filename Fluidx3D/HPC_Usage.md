@@ -34,7 +34,9 @@ Our internal HPC cluster, Vega, has the following environment as of July 9, 2025
 - **nvcc Version:** 12.2.91  
 - **Job Scheduler:** Moab/Torque  
 
+
 ---
+
 
 ## 🛠️ Section 2: Installing FluidX3D on the Head Node
 
@@ -59,7 +61,9 @@ chmod +x make.sh
 
 This gives the script permission to be run as a program.
 
+
 ---
+
 
 ## 🧾 Section 3: Modifying the Makefile
 
@@ -93,7 +97,9 @@ bin/FluidX3D: temp/graphics.o temp/info.o temp/kernel.o temp/lbm.o temp/lodepng.
 
 The only difference is the **addition of `-lstdc++fs`** at the end of the `$(CC)` line.
 
+
 ---
+
 
 ## 🚦 Section 4: Building and Running FluidX3D
 
