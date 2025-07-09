@@ -33,7 +33,3 @@ Our internal HPC cluster, Vega, has the following environment as of July 9, 2025
 - **Driver Version:** 535.129.03 (supports CUDA 12.2)  
 - **nvcc Version:** 12.2.91  
 - **Job Scheduler:** Moab/Torque  
-
-## 📍 Next Steps
-
-Now that you've reviewed the purpose and structure of this guide, you're ready to begin.
