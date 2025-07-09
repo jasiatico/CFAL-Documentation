@@ -94,3 +94,43 @@ bin/FluidX3D: temp/graphics.o temp/info.o temp/kernel.o temp/lbm.o temp/lodepng.
 The only difference is the **addition of `-lstdc++fs`** at the end of the `$(CC)` line.
 
 ---
+
+## 🚦 Section 4: Building and Running FluidX3D
+
+With the environment configured and the Makefile updated, you're now ready to compile and run FluidX3D.
+
+### ▶️ Compile the Code
+
+Once you're on the GPU node and have completed all environment setup steps (CUDA modules loaded, paths exported), build FluidX3D by running:
+
+```bash
+./make.sh
+```
+
+This script will compile all necessary source files and output the `FluidX3D` binary inside the `bin/` directory.
+
+### 📘 Next Steps
+
+Once the build completes successfully, you're ready to start simulations. Instead of duplicating instructions here, please refer directly to the **official FluidX3D user guide** for how to prepare and launch simulations:
+
+🔗 [FluidX3D GitHub Documentation](https://github.com/ProjectPhysX/FluidX3D#usage)
+
+This includes how to:
+
+- Set up input files
+- Configure simulation parameters
+- Visualize results
+- Benchmark performance
+
+### ✅ Summary
+
+You have now:
+
+- Cloned and prepared the FluidX3D source
+- Modified the Makefile to ensure proper linking
+- Loaded the correct CUDA environment on the GPU node
+- Successfully built the executable
+
+You're ready to simulate.
+
+Happy computing! 🎉
