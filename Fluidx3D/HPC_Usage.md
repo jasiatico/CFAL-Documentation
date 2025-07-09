@@ -61,10 +61,11 @@ chmod +x make.sh
 
 This gives the script permission to be run as a program.
 
+&nbsp;
 
 ---
----
 
+&nbsp;
 
 ## 🧾 Section 3: Modifying the Makefile
 
