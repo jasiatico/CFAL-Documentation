@@ -34,9 +34,11 @@ Our internal HPC cluster, Vega, has the following environment as of July 9, 2025
 - **nvcc Version:** 12.2.91  
 - **Job Scheduler:** Moab/Torque  
 
+&nbsp;
 
 ---
 
+&nbsp;
 
 ## 🛠️ Section 2: Installing FluidX3D on the Head Node
 
@@ -99,9 +101,11 @@ bin/FluidX3D: temp/graphics.o temp/info.o temp/kernel.o temp/lbm.o temp/lodepng.
 
 The only difference is the **addition of `-lstdc++fs`** at the end of the `$(CC)` line.
 
+&nbsp;
 
 ---
 
+&nbsp;
 
 ## 🚦 Section 4: Building and Running FluidX3D
 
