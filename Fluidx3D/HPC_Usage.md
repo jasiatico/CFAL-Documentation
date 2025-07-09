@@ -61,7 +61,7 @@ This gives the script permission to be run as a program.
 
 ---
 
-## 🧾 Section 3: Modifying the Makefile – Explanation & Justification
+## 🧾 Section 3: Modifying the Makefile
 
 Before compiling FluidX3D, you need to modify the `Makefile` to ensure it links correctly with the C++ filesystem library required by the CUDA toolkit and your compiler.
 
@@ -75,7 +75,7 @@ Without this flag, the build may fail with an error related to unresolved refere
 
 1. Open the `Makefile` located in the root of the `FluidX3D` directory.
 
-2. Locate this block (usually near the bottom):
+2. Locate this block:
 
 ```makefile
 bin/FluidX3D: temp/graphics.o temp/info.o temp/kernel.o temp/lbm.o temp/lodepng.o temp/main.o temp/setup.o temp/shapes.o make.sh
@@ -92,14 +92,5 @@ bin/FluidX3D: temp/graphics.o temp/info.o temp/kernel.o temp/lbm.o temp/lodepng.
 ```
 
 The only difference is the **addition of `-lstdc++fs`** at the end of the `$(CC)` line.
-
-### ✅ Summary
-
-You have now:
-
-- Opened and edited the `Makefile`
-- Added `-lstdc++fs` to ensure compatibility with the C++17 `filesystem` API
-
-This change ensures a smooth build process when compiling on GPU nodes that rely on recent toolchains and CUDA versions.
 
 ---
