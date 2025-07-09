@@ -61,3 +61,45 @@ This gives the script permission to be run as a program.
 
 ---
 
+## 🧾 Section 3: Modifying the Makefile – Explanation & Justification
+
+Before compiling FluidX3D, you need to modify the `Makefile` to ensure it links correctly with the C++ filesystem library required by the CUDA toolkit and your compiler.
+
+### 🔧 Why Modify the Makefile?
+
+By default, the `Makefile` provided by FluidX3D does **not** include the `-lstdc++fs` linker flag. This is needed on some systems (like ours) when using C++17 features such as the `<filesystem>` header, which FluidX3D uses internally.
+
+Without this flag, the build may fail with an error related to unresolved references to `std::filesystem` symbols.
+
+### ✏️ Instructions
+
+1. Open the `Makefile` located in the root of the `FluidX3D` directory.
+
+2. Locate this block (usually near the bottom):
+
+```makefile
+bin/FluidX3D: temp/graphics.o temp/info.o temp/kernel.o temp/lbm.o temp/lodepng.o temp/main.o temp/setup.o temp/shapes.o make.sh
+	@mkdir -p bin
+	$(CC) temp/*.o -o bin/FluidX3D $(CFLAGS) $(LDFLAGS_OPENCL) $(LDLIBS_OPENCL) $(LDFLAGS_X11) $(LDLIBS_X11)
+```
+
+3. Replace it with this modified version:
+
+```makefile
+bin/FluidX3D: temp/graphics.o temp/info.o temp/kernel.o temp/lbm.o temp/lodepng.o temp/main.o temp/setup.o temp/shapes.o make.sh
+	@mkdir -p bin
+	$(CC) temp/*.o -o bin/FluidX3D $(CFLAGS) $(LDFLAGS_OPENCL) $(LDLIBS_OPENCL) $(LDFLAGS_X11) $(LDLIBS_X11) -lstdc++fs
+```
+
+The only difference is the **addition of `-lstdc++fs`** at the end of the `$(CC)` line.
+
+### ✅ Summary
+
+You have now:
+
+- Opened and edited the `Makefile`
+- Added `-lstdc++fs` to ensure compatibility with the C++17 `filesystem` API
+
+This change ensures a smooth build process when compiling on GPU nodes that rely on recent toolchains and CUDA versions.
+
+---
