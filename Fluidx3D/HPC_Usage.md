@@ -33,3 +33,38 @@ Our internal HPC cluster, Vega, has the following environment as of July 9, 2025
 - **Driver Version:** 535.129.03 (supports CUDA 12.2)  
 - **nvcc Version:** 12.2.91  
 - **Job Scheduler:** Moab/Torque  
+
+## 🛠️ Section 2: Installing FluidX3D on the Head Node
+
+Follow these steps to install the FluidX3D source code and prepare the project for compilation.
+
+### 1️⃣ Clone the FluidX3D Repository
+
+First, SSH into the **head node** of the cluster (not a compute node), then clone the FluidX3D GitHub repository:
+
+```bash
+git clone https://github.com/ProjectPhysX/FluidX3D.git
+cd FluidX3D
+```
+
+### 2️⃣ Make the Build Script Executable
+
+The repository contains a `make.sh` script used to build the code. It needs to be made executable:
+
+```bash
+chmod +x make.sh
+```
+
+This gives the script permission to be run as a program.
+
+---
+
+### ✅ Summary
+
+At this point, you’ve:
+
+- Cloned the official FluidX3D GitHub repository
+- Navigated into the project directory
+- Prepared the build script (`make.sh`) for use later
+
+You are now ready to make the required modification to the Makefile before compiling the code on the GPU node.
