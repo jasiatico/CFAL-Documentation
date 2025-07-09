@@ -34,6 +34,8 @@ Our internal HPC cluster, Vega, has the following environment as of July 9, 2025
 - **nvcc Version:** 12.2.91  
 - **Job Scheduler:** Moab/Torque  
 
+---
+
 ## 🛠️ Section 2: Installing FluidX3D on the Head Node
 
 Follow these steps to install the FluidX3D source code and prepare the project for compilation.
@@ -59,12 +61,3 @@ This gives the script permission to be run as a program.
 
 ---
 
-### ✅ Summary
-
-At this point, you’ve:
-
-- Cloned the official FluidX3D GitHub repository
-- Navigated into the project directory
-- Prepared the build script (`make.sh`) for use later
-
-You are now ready to make the required modification to the Makefile before compiling the code on the GPU node.
