@@ -99,21 +99,37 @@ The only difference is the **addition of `-lstdc++fs`** at the end of the `$(CC)
 
 With the environment configured and the Makefile updated, you're now ready to compile and run FluidX3D.
 
+### 📦 GPU Node Environment Setup
+
+Before compiling, make sure you have loaded the appropriate modules and set the environment variables on the **GPU node**:
+
+```bash
+module purge
+module use /apps/spack/share/spack/modules/linux-rocky8-zen4
+module load cuda/12.2.0-gcc-13.2.0-nwhgfor
+
+export CPLUS_INCLUDE_PATH=$CUDA_HOME/targets/x86_64-linux/include:$CPLUS_INCLUDE_PATH
+export LIBRARY_PATH=/usr/local/cuda/targets/x86_64-linux/lib:$LIBRARY_PATH
+export LD_LIBRARY_PATH=/usr/local/cuda/targets/x86_64-linux/lib:$LD_LIBRARY_PATH
+```
+
+These settings ensure the compiler and linker can find the required CUDA headers and libraries for FluidX3D.
+
 ### ▶️ Compile the Code
 
-Once you're on the GPU node and have completed all environment setup steps (CUDA modules loaded, paths exported), build FluidX3D by running:
+Once you've set up the environment, build FluidX3D by running:
 
 ```bash
 ./make.sh
 ```
 
-This script will compile all necessary source files and output the `FluidX3D` binary inside the `bin/` directory.
+This script compiles the source files and, if successful, immediately runs the FluidX3D simulation using the generated binary.
 
 ### 📘 Next Steps
 
-Once the build completes successfully, you're ready to start simulations. Instead of duplicating instructions here, please refer directly to the **official FluidX3D user guide** for how to prepare and launch simulations:
+Instead of duplicating instructions here, please refer directly to the **official FluidX3D user guide** for how to prepare and launch simulations:
 
-🔗 [FluidX3D GitHub Documentation](https://github.com/ProjectPhysX/FluidX3D#usage)
+🔗 [FluidX3D GitHub Documentation](https://github.com/ProjectPhysX/FluidX3D/blob/master/DOCUMENTATION.md)
 
 This includes how to:
 
@@ -121,16 +137,3 @@ This includes how to:
 - Configure simulation parameters
 - Visualize results
 - Benchmark performance
-
-### ✅ Summary
-
-You have now:
-
-- Cloned and prepared the FluidX3D source
-- Modified the Makefile to ensure proper linking
-- Loaded the correct CUDA environment on the GPU node
-- Successfully built the executable
-
-You're ready to simulate.
-
-Happy computing! 🎉
