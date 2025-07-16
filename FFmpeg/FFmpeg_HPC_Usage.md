@@ -12,16 +12,16 @@ This guide walks you through compiling both **x264** and **FFmpeg** from source 
 
 ## ⚙️ Prerequisites
 
-Make sure your cluster environment supports the following tools via modules:
+Make sure the cluster environment supports the following tools via modules:
 
 - `gcc` (C compiler)
 - `yasm` and `nasm` (assembly compilers)
 
-You’ll also need a writable user directory for installing FFmpeg locally.
+These should be already installed on the cluster and should work as of the posted date.
 
 ## 🛠️ Steps to Compile FFmpeg with x264
 
-Create a shell script or run the following commands interactively on the **head node**:
+Run the following commands interactively on the **head node**:
 
 ### 1️⃣ Load Required Modules
 
@@ -32,7 +32,7 @@ module load yasm
 module load nasm
 ```
 
-Check that `yasm` and `nasm` are available:
+Check that `yasm` and `nasm` are available (this step isn't needed, but is just a double check):
 
 ```bash
 yasm --version
@@ -44,7 +44,7 @@ nasm --version
 Pick an installation directory in your home folder (you can change this path):
 
 ```bash
-INSTALL_DIR="$HOME/compiled_software/FFMPEG/V1"
+INSTALL_DIR="$HOME/compiled_software/FFmpeg"
 ```
 
 ### 3️⃣ Build x264
@@ -101,3 +101,4 @@ $INSTALL_DIR/ffmpeg_build/bin/ffmpeg -i input_frames/%04d.png -c:v libx264 outpu
 ---
 
 This setup ensures full x264 support and can be reused or versioned across projects.
+Full details will be in the next sections.
