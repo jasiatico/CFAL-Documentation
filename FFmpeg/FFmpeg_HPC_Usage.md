@@ -106,7 +106,7 @@ Or, to make it easier to use, you can add it to your `PATH` so you can just type
 Append this line to your `~/.bashrc` or `~/.bash_profile`:
 
 ```bash
-export PATH="$INSTALL_DIR/ffmpeg_build/bin:$PATH"
+export PATH="$INSTALL_DIR/FFmpeg_build/bin:$PATH"
 ```
 
 Then reload your shell configuration:
