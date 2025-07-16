@@ -6,7 +6,7 @@ FFmpeg is a powerful open-source multimedia framework used for video and audio e
 
 ## 🧭 Purpose of This Guide
 
-Although FFmpeg is available on the cluster, **it is not built with x264 support** by default as of **July 16, 2025**. This means you cannot encode videos in the widely-used H.264 format unless you build FFmpeg yourself.
+Although FFmpeg is available on the cluster, **it is not built with x264 support** by default as of **July 16, 2025**. This means you cannot encode videos in the widely-used H.264 format unless you build FFmpeg yourself. H.264 offers a great balance between video quality annd file size, and it's supported by nearly all media players, browsers, and platforms. However, FFmpeg can only produce H.264 video viles (typically .mp4) if it is built with the x264 library. Without x264, FFmpeg cannot encode to H.264 - it can still read (decode) H.264 video, but it cannot write it. As a result, trying to generate **.mp4** videos on a system with FFmpeg but without x264 will fail or fall back to less efficient.
 
 This guide walks you through compiling both **x264** and **FFmpeg** from source and installing them into your home directory.
 
