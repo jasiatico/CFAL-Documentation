@@ -32,7 +32,9 @@ python generate_video_ffmpeg.py <input_dir> <output_dir> [options]
 ### Options
 - `--fps INT`: Frame rate (default: 20).
 - `--duration FLOAT`: Target duration in seconds (overrides FPS).
-- `--quality INT`: Quality level (1 = worst, 100 = best/lossless; note that lossless creates large filesizes. For optimum filesize/quality choose ~50).
+- `--quality INT`: Quality level (1 = worst, 100 = best/lossless).
+
+**note that lossless creates large filesizes. For optimum filesize/quality choose ~50**
 
 ### Notes
 - Requires FFmpeg compiled with `libx264`.
