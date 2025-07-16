@@ -12,10 +12,10 @@ Arguments:
     output.gif            Output GIF file.
 
 Options:
-    --fps INT             Output GIF frame rate (default: 15).
+    --fps INT             Output GIF frame rate (default: 10).
     --width INT           Output width in pixels (preserves aspect ratio).
     --dither {none,basic,best}
-                          Dithering method (default: basic).
+                          Dithering method (default: best).
     --quality {fast,default,best}
                           Palette quality mode (default: default).
     --start TIME          Start time in seconds or HH:MM:SS format.
@@ -44,10 +44,10 @@ def parse_args():
     parser.add_argument("input", help="Input MP4 file")
     parser.add_argument("output", help="Output GIF file")
 
-    parser.add_argument("--fps", type=int, default=15)
-    parser.add_argument("--width", type=int)
-    parser.add_argument("--dither", choices=["none", "basic", "best"], default="basic")
-    parser.add_argument("--quality", choices=["fast", "default", "best"], default="default")
+    parser.add_argument("--fps", type=int, default=10)
+    parser.add_argument("--width", type=int, default=480)
+    parser.add_argument("--dither", choices=["none", "basic", "best"], default="best")
+    parser.add_argument("--quality", choices=["fast", "default", "best"], default="best")
 
     parser.add_argument("--start", type=str)
     parser.add_argument("--end", type=str)

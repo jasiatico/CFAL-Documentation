@@ -10,7 +10,7 @@ Functionality:
     - Validates PNG sequence (single prefix only)
     - Automatically sorts frames by numerical index
     - Derives FPS from target duration or uses fixed FPS
-    - Caps FPS at 60 for compatibility
+    - Ability to cap FPS if needed (default is 240)
     - Converts frames to MP4 using libx264 encoder
     - Supports adjustable quality (mapped from 1–100 scale to CRF 51–0)
     - Output filename includes encoded metadata tags (fps, duration, quality)
@@ -97,13 +97,12 @@ def generate_animation(input_dir, output_dir, fps=20, duration=None, default_fps
     os.makedirs(output_dir, exist_ok=True)
     images, prefix = validate_input_images(input_dir)
     num_frames = len(images)
-
-    if duration:
+        
+    if duration and not fps_was_explicit:
         derived_fps = round(num_frames / duration)
-        fps = min(derived_fps, 60)
-        fps_was_explicit = False
+        fps = min(derived_fps, 240)
 
-    crf = 18 if quality is None else map_quality_to_crf(quality)
+    crf = map_quality_to_crf(quality)
     suffix = build_suffix(fps, duration, fps_was_explicit, quality)
 
     temp_seq_dir = tempfile.mkdtemp()
@@ -139,7 +138,7 @@ if __name__ == "__main__":
     parser.add_argument("output_dir", help="Directory to save MP4")
     parser.add_argument("--fps", type=int, default=None, help="Frames per second")
     parser.add_argument("--duration", type=float, help="Target duration in seconds")
-    parser.add_argument("--quality", type=int, help="Quality level from 1 (worst) to 100 (best/lossless)")
+    parser.add_argument("--quality", type=int, default=50, help="Quality level from 1 (worst) to 100 (best/lossless)")
 
     args = parser.parse_args()
     fps = args.fps if args.fps is not None else 20
