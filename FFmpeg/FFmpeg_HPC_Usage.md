@@ -79,7 +79,7 @@ cd FFmpeg
 
 export PKG_CONFIG_PATH="$INSTALL_DIR/x264_build/lib/pkgconfig:$PKG_CONFIG_PATH"
 
-./configure --prefix="$INSTALL_DIR/ffmpeg_build"   --pkg-config-flags="--static"   --extra-cflags="-I$INSTALL_DIR/x264_build/include"   --extra-ldflags="-L$INSTALL_DIR/x264_build/lib"   --enable-gpl --enable-libx264 --enable-static --disable-shared
+./configure --prefix="$INSTALL_DIR/FFmpeg_build"   --pkg-config-flags="--static"   --extra-cflags="-I$INSTALL_DIR/x264_build/include"   --extra-ldflags="-L$INSTALL_DIR/x264_build/lib"   --enable-gpl --enable-libx264 --enable-static --disable-shared
 
 make -j$(nproc)
 make install
