@@ -45,6 +45,7 @@ Pick an installation directory in your home folder (you can change this path):
 
 ```bash
 INSTALL_DIR="$HOME/compiled_software/FFmpeg"
+echo $INSTALL_DIR
 ```
 
 ### 3️⃣ Build x264
@@ -71,8 +72,8 @@ You should see an `x264` binary there.
 
 ```bash
 cd "$INSTALL_DIR"
-mkdir -p ffmpeg_build/src
-cd ffmpeg_build/src
+mkdir -p "$INSTALL_DIR/FFmpeg_build/src"
+cd "$INSTALL_DIR/FFmpeg_build/src"
 git clone --depth 1 https://github.com/FFmpeg/FFmpeg.git
 cd FFmpeg
 
