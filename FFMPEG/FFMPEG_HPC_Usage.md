@@ -1,0 +1,103 @@
+
+# 🎞️ Compiling FFmpeg with x264 Support on the HPC Cluster  
+## Section: Building FFmpeg from Source with libx264 (July 16, 2025)
+
+FFmpeg is a powerful open-source multimedia framework used for video and audio encoding, decoding, transcoding, and streaming. In our research environment, FFmpeg is often used to generate video output from simulation data or image sequences.
+
+## 🧭 Purpose of This Guide
+
+Although FFmpeg is available on the cluster, **it is not built with x264 support** by default as of **July 16, 2025**. This means you cannot encode videos in the widely-used H.264 format unless you build FFmpeg yourself.
+
+This guide walks you through compiling both **x264** and **FFmpeg** from source and installing them into your home directory.
+
+## ⚙️ Prerequisites
+
+Make sure your cluster environment supports the following tools via modules:
+
+- `gcc` (C compiler)
+- `yasm` and `nasm` (assembly compilers)
+
+You’ll also need a writable user directory for installing FFmpeg locally.
+
+## 🛠️ Steps to Compile FFmpeg with x264
+
+Create a shell script or run the following commands interactively on the **head node**:
+
+### 1️⃣ Load Required Modules
+
+```bash
+module purge
+module load gcc
+module load yasm
+module load nasm
+```
+
+Check that `yasm` and `nasm` are available:
+
+```bash
+yasm --version
+nasm --version
+```
+
+### 2️⃣ Define Installation Path
+
+Pick an installation directory in your home folder (you can change this path):
+
+```bash
+INSTALL_DIR="$HOME/compiled_software/FFMPEG/V1"
+```
+
+### 3️⃣ Build x264
+
+```bash
+mkdir -p "$INSTALL_DIR/x264_build/src"
+cd "$INSTALL_DIR/x264_build/src"
+git clone --depth 1 https://code.videolan.org/videolan/x264.git
+cd x264
+./configure --prefix="$INSTALL_DIR/x264_build" --enable-static --enable-pic
+make -j$(nproc)
+make install
+```
+
+Check that the build succeeded:
+
+```bash
+ls "$INSTALL_DIR/x264_build/bin"
+```
+
+You should see an `x264` binary there.
+
+### 4️⃣ Build FFmpeg with x264 Support
+
+```bash
+cd "$INSTALL_DIR"
+mkdir -p ffmpeg_build/src
+cd ffmpeg_build/src
+git clone --depth 1 https://github.com/FFmpeg/FFmpeg.git
+cd FFmpeg
+
+export PKG_CONFIG_PATH="$INSTALL_DIR/x264_build/lib/pkgconfig:$PKG_CONFIG_PATH"
+
+./configure --prefix="$INSTALL_DIR/ffmpeg_build"   --pkg-config-flags="--static"   --extra-cflags="-I$INSTALL_DIR/x264_build/include"   --extra-ldflags="-L$INSTALL_DIR/x264_build/lib"   --enable-gpl --enable-libx264 --enable-static --disable-shared
+
+make -j$(nproc)
+make install
+```
+
+### ✅ Final Notes
+
+Your compiled FFmpeg binary will now be located at:
+
+```bash
+$INSTALL_DIR/ffmpeg_build/bin/ffmpeg
+```
+
+You can add it to your path or invoke it directly when running simulations or video generation scripts:
+
+```bash
+$INSTALL_DIR/ffmpeg_build/bin/ffmpeg -i input_frames/%04d.png -c:v libx264 output.mp4
+```
+
+---
+
+This setup ensures full x264 support and can be reused or versioned across projects.
