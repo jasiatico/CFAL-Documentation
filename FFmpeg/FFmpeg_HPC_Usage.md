@@ -103,10 +103,10 @@ Or, to make it easier to use, you can add it to your `PATH` so you can just type
 
 ### ➕ Add FFmpeg to Your PATH
 
-Append this line to your `~/.bashrc` or `~/.bash_profile`:
+Append this line to your `~/.bashrc`:
 
 ```bash
-export PATH="$INSTALL_DIR/FFmpeg_build/bin:$PATH"
+grep -qxF 'export PATH="$INSTALL_DIR/FFmpeg_build/bin:$PATH"' ~/.bashrc || echo 'export PATH="$INSTALL_DIR/FFmpeg_build/bin:$PATH"' >> ~/.bashrc
 ```
 
 Then reload your shell configuration:
