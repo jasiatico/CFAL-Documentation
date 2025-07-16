@@ -90,13 +90,13 @@ make install
 Check that your compiled FFmpeg binary was created:
 
 ```bash
-ls $INSTALL_DIR/ffmpeg_build/bin/ffmpeg
+ls $INSTALL_DIR/FFmpeg_build/bin/ffmpeg
 ```
 
 You can run it directly using the full path (**not preferred**):
 
 ```bash
-$INSTALL_DIR/ffmpeg_build/bin/ffmpeg -i input_frames/%04d.png -c:v libx264 output.mp4
+$INSTALL_DIR/FFmpeg_build/bin/ffmpeg -i input_frames/%04d.png -c:v libx264 output.mp4
 ```
 
 Or, to make it easier to use, you can add it to your `PATH` so you can just type `ffmpeg` from any directory (**preferred**):
