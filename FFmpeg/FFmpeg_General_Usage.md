@@ -79,6 +79,22 @@ python mp4_to_gif_converter.py input.mp4 output.gif [options]
 - `--transparency`: Enable alpha input.
 - `--loop {yes,no}`: Loop GIF (default: yes).
 
+### Dithering and Quality Details
+
+**`--dither` Options:**
+
+- `none`: Disables dithering (`paletteuse=dither=none`). May produce noticeable banding in gradients.
+- `basic`: Uses ordered Bayer dithering with reduced strength (`paletteuse=dither=bayer:bayer_scale=5`). A balance of speed and appearance; this is the default.
+- `best`: Uses Floyd–Steinberg dithering (`paletteuse=dither=floyd_steinberg`). Produces higher-quality visuals at the cost of processing time and larger output sizes.
+
+**`--quality` Options:**
+
+- `fast`: Uses `palettegen=stats_mode=diff`. Prioritizes speed and lighter file size; may skip subtle color details.
+- `default`: Uses `palettegen` with no explicit mode. General-purpose balance between quality and speed.
+- `best`: Uses `palettegen=stats_mode=full`. Analyzes entire frame sequence for maximum color preservation. Slower but produces richer color output.
+
+Use `--quality` to control how colors are selected for the GIF palette, and `--dither` to control how those colors are blended spatially. For best visual fidelity, use `--quality best --dither best`. For speed, use `--quality fast --dither none`.
+
 ### Notes
 - Only two of `--start`, `--end`, `--duration` can be used.
 - GIFs are large by nature; use `gifsicle` to post-optimize if needed.
