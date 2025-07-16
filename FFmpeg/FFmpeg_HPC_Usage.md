@@ -87,19 +87,44 @@ make install
 
 ### ✅ Final Notes
 
-Your compiled FFmpeg binary will now be located at:
+Check that your compiled FFmpeg binary was created:
 
 ```bash
-$INSTALL_DIR/FFmpeg_build/bin/ffmpeg
+ls $INSTALL_DIR/ffmpeg_build/bin/ffmpeg
 ```
 
-You can add it to your path or invoke it directly when running simulations or video generation scripts:
+You can run it directly using the full path (**not preferred**):
 
 ```bash
-$INSTALL_DIR/FFmpeg_build/bin/ffmpeg -i input_frames/%04d.png -c:v libx264 output.mp4
+$INSTALL_DIR/ffmpeg_build/bin/ffmpeg -i input_frames/%04d.png -c:v libx264 output.mp4
 ```
+
+Or, to make it easier to use, you can add it to your `PATH` so you can just type `ffmpeg` from any directory (**preferred**):
+
+### ➕ Add FFmpeg to Your PATH
+
+Append this line to your `~/.bashrc` or `~/.bash_profile`:
+
+```bash
+export PATH="$INSTALL_DIR/ffmpeg_build/bin:$PATH"
+```
+
+Then reload your shell configuration:
+
+```bash
+source ~/.bashrc
+```
+
+Now you can simply run:
+
+```bash
+ffmpeg -i input_frames/%04d.png -c:v libx264 output.mp4
+```
+
+From anywhere in your terminal session.
 
 ---
 
-This setup ensures full x264 support and can be reused or versioned across projects.
-Full details will be in the next sections.
+This setup ensures full `libx264` support and can be reused or versioned across projects.
+
+Full usage details and integration tips will be provided in the next sections.
