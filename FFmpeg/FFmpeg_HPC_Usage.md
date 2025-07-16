@@ -90,13 +90,13 @@ make install
 Your compiled FFmpeg binary will now be located at:
 
 ```bash
-$INSTALL_DIR/ffmpeg_build/bin/ffmpeg
+$INSTALL_DIR/FFmpeg_build/bin/ffmpeg
 ```
 
 You can add it to your path or invoke it directly when running simulations or video generation scripts:
 
 ```bash
-$INSTALL_DIR/ffmpeg_build/bin/ffmpeg -i input_frames/%04d.png -c:v libx264 output.mp4
+$INSTALL_DIR/FFmpeg_build/bin/ffmpeg -i input_frames/%04d.png -c:v libx264 output.mp4
 ```
 
 ---
