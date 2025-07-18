@@ -7,7 +7,7 @@ This repository contains two Python scripts for video processing using FFmpeg:
 
 I also have created a bash script to automatically execute both python scripts:
 
-1. `animate.sh` - executes both python scripts sequentially to generate an MP4 and GIF.
+1. `animate.sh` - Executes both python scripts sequentially to generate an MP4 and GIF.
 
 ---
 
@@ -136,8 +136,6 @@ This will:
 ### Notes
 - Requires `generate_video_ffmpeg.py` and `mp4_to_gif_converter.py` to be located in `~/scripts/` or modify the bash file accordingly.
 - The GIF and MP4 are generated with default parameters. Modify the script to pass extra arguments as needed.
-
-```
 
 ---
 **Author**  
