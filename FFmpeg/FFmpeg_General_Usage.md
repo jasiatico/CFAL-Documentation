@@ -5,6 +5,10 @@ This repository contains two Python scripts for video processing using FFmpeg:
 1. `generate_video_ffmpeg.py` - Converts a PNG image sequence into an MP4.
 2. `mp4_to_gif_converter.py` - Converts an MP4 into an optimized GIF.
 
+I also have created a bash script to automatically execute both python scripts:
+
+1. `animate.sh` - executes both python scripts sequentially to generate an MP4 and GIF.
+
 ---
 
 ## 1. `generate_video_ffmpeg.py`
@@ -106,6 +110,36 @@ python mp4_to_gif_converter.py input.mp4 output.gif --fps 10 --width 800 --dithe
 
 ---
 
+## 3. `animate.sh`
+
+**Purpose:** Automate the full pipeline by sequentially running `generate_video_ffmpeg.py` and `mp4_to_gif_converter.py`. This script reduces the need to manually invoke each Python script.
+
+### Workflow
+1. **Input & Output Directories** - Takes the input folder of PNG frames and an output folder.
+2. **Generate MP4** - Calls `generate_video_ffmpeg.py` to produce MP4 file.
+3. **Locate MP4** - Finds the most recently created MP4 in the output directory.
+4. **Convert to GIF** - Passes the MP4 to `mp4_to_gif_converter.py` to generate an optimized GIF.
+
+### Usage
+```bash
+./animate.sh [input_folder] [output_folder]
+```
+
+### Example
+```bash
+./animate /home/user/frames ./output
+```
+This will:
+- Read PNG frames from `./frames`
+- Output the MP4 and GIF to `./output`
+
+### Notes
+- Requires `generate_video_ffmpeg.py` and `mp4_to_gif_converter.py` to be located in `~/scripts/` or modify the bash file accordingly.
+- The GIF and MP4 are generated with default parameters. Modify the script to pass extra arguments as needed.
+
+```
+
+---
 **Author**  
 Jackson Asiatico  
 Embry-Riddle Aeronautical University  
