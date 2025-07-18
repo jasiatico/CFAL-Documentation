@@ -42,7 +42,8 @@ def parse_args():
     parser = argparse.ArgumentParser(description="Convert MP4 to optimized GIF")
 
     parser.add_argument("input", help="Input MP4 file")
-    parser.add_argument("output", help="Output GIF file")
+    parser.add_argument("output", nargs="?", help="Output GIF file (optional, defaults to input name with .gif)")
+
 
     parser.add_argument("--fps", type=int, default=10)
     parser.add_argument("--width", type=int, default=480)
@@ -99,6 +100,9 @@ def validate_time_logic(args):
 
 def main():
     args = parse_args()
+    if not args.output:
+        args.output = args.input.rsplit('.', 1)[0] + ".gif"
+    
     validate_time_logic(args)
 
     palette_path = "palette.png"

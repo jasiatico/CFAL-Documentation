@@ -153,4 +153,3 @@ if __name__ == "__main__":
         quality=args.quality,
         fps_was_explicit=fps_explicit
     )
-
