@@ -256,7 +256,7 @@ When you submit a job, the scheduler automatically sets several environment vari
 ### 4.5 Submitting Jobs ###
 Finally, we get to submitting jobs! At this point, you should have a good idea of what each part of the job script does, but there’s one last thing to keep in mind.
 
-Remember how we mentioned running jobs in your scratch space (`/scratch/<yourusername>`) or better performance? If you try to run directly from your home directory, things can slow down a lot because of network file system latency. You might not notice it for small jobs, but for large simulations that read and write a lot of data, it can become a major bottleneck.
+Remember how we mentioned running jobs in your scratch space (`/scratch/<yourusername>`) for better performance? If you try to run directly from your home directory, things can slow down a lot because of network file system latency. You might not notice it for small jobs, but for large simulations that read and write a lot of data, it can become a major bottleneck.
 
 In general, it’s best practice to always run jobs from scratch space and only copy back important results to your home directory when finished. My workflow usually looks something like this:
 
@@ -473,8 +473,6 @@ rm -r "$SCRATCH_TASK_DIR"
 </details>
 </details>
 
-
-<br>
 
 <details>
 <summary>Design Manager</summary>
