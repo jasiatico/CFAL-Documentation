@@ -39,7 +39,7 @@ The above runtimes are made up for illustrative purposes. Actual runtimes will v
 
 ## 2. Logging in and Setup ##
 
-WIP
+WIP. This will serve as knowledge base to connect to Vega through mobaxterm or vs code remote ssh.
 
 ## 3. Storage and Compute Environment ##
 Upon logging into Vega, you will be placed in your home directory, which is located at `/home2/<yourusername>`.
