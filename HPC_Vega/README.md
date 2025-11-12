@@ -44,7 +44,7 @@ The above runtimes are made up for illustrative purposes. Actual runtimes will v
 
 ## Table of Contents
 1. [Accessing Vega with VS Code](docs/01_Access_Setup.md)
-2. [Vega Basics and Job Submission](docs/02_Job_Submission.md)
+2. [Vega Basics and Job Submission](docs/02_Vega_Basics.md)
 3. [Running Star-CCM+ Jobs](docs/03_StarCCM_Jobs.md)
 4. [Resource Planning and Performance](docs/04_Resource_Selection.md)
 5. [Summary of Vega Hardware/Software](docs/Appendix_Vega_Reference.md)
