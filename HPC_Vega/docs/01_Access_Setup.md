@@ -94,4 +94,4 @@ Most Windows systems include OpenSSH by default. Generate SSH keys as follows:
 
 ---
 
-Next Topic: [Vega Basics and Job Submission](docs/02_Vega_Basics.md)
+Next Topic: [Vega Basics and Job Submission](./02_Vega_Basics.md)

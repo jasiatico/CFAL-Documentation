@@ -338,4 +338,4 @@ rm -r "$SCRATCH_TASK_DIR"
 </details>
 
 ---
-Next Topic: [Resource Planning and Performance](docs/04_Resource_Selection.md)
+Next Topic: [Resource Planning and Performance](./04_Resource_Selection.md)
