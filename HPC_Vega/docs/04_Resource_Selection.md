@@ -21,6 +21,8 @@ When solving, memory use increases with physics complexity. For a **single-phase
 > - Parallel runs introduce slight memory overhead due to inter-node communication
 > - Always leave some buffer (10-20%) to avoid running out of memory
 
+---
+
 ### Cell-to-Core Ratio and Scaling Efficiency ###
 For efficient scaling, target 50,000–100,000 cells per core.
 This keeps each core busy without excessive communication overhead.
@@ -28,6 +30,8 @@ This keeps each core busy without excessive communication overhead.
 One on Vega compute node (192 cores, 1.5 TB RAM):
 - Minimum: 9.6 million cells (50,000 cells/core)
 - Maximum: 19.2 million cells (100,000 cells/core)
+
+---
 
 ### Theoretical vs. Practical Limits ###
 Theoretical memory limit (1.5 TB RAM, 0.5–4 GB per million cells):
@@ -38,11 +42,15 @@ In practice, using the 50k-100k cells per core guideline:
 - Estimate closer to 10-20 million cells per compute node on Vega.
 - This allows a reasonable number of cores while maintaining good parallel efficiency and manageable runtimes.
 
+---
+
 ### Balancing Memory and CPU Cores ###
 - **Memory/RAM** determines how large of a simulation you can run.
 - **CPU cores** determine how fast it will run.
 
 You could fit hundreds of millions of cells in memory, but without enough cores, it would take forever. Conversely, if you have many cores but not enough memory, your job will crash.
+
+---
 
 ### Understanding Parallel Scaling ###
 Scaling is not linear. Doubling cores does not halve runtime. Cells continuously exchange information with neighboring cells (pressure, velocity, turbulence, etc.), and communication overhead grows as more cores and nodes are added. 
