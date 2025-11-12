@@ -64,6 +64,7 @@ Too many cores lead to more time spent syncing and sharing data than actually so
 **Parallel Efficiency**:
 Below is an example of parallel scaling. This data is unrelated to Star-CCM+ or Vega, but it illustrates the concept well. As you increase core count, speedup improves almost linearly at first, but efficiency drops as communication overhead increases.
 ![CFD Parallel Scaling](../images/CoreScaling.png)
+
 [Source: Y. Thorimbert, et. al., "Virtual Wave Flume and Oscillating Water Column Modeled by Lattice Boltzmann Method and Comparison with Experimental Data](https://www.researchgate.net/publication/301241406_Virtual_Wave_Flume_and_Oscillating_Water_Column_Modeled_by_Lattice_Boltzmann_Method_and_Comparison_with_Experimental_Data)
 
 As an additional note, the scaling in this example drops off very quickly. In reality, it depends on many factors including:
