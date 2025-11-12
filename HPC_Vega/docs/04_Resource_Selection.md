@@ -58,6 +58,14 @@ Below is an example of parallel scaling. This data is unrelated to Star-CCM+ or 
 ![CFD Parallel Scaling](../images/CoreScaling.png)
 [Source: Y. Thorimbert, et. al., "Virtual Wave Flume and Oscillating Water Column Modeled by Lattice Boltzmann Method and Comparison with Experimental Data](https://www.researchgate.net/publication/301241406_Virtual_Wave_Flume_and_Oscillating_Water_Column_Modeled_by_Lattice_Boltzmann_Method_and_Comparison_with_Experimental_Data)
 
+As an additional note, the scaling in this example drops off very quickly. In reality, it depends on many factors including:
+- The software (Star-CCM+ vs. FUN3D)
+- The hardware architecture (CPU type, memory bandwidth)
+- The problem size (mesh resolution)
+- The solver settings (e.g., turbulence model, discretization schemes)
+- The network interconnect speed and latency (e.g., InfiniBand vs. Ethernet)
+
+All this is to say that we should carefully consider these factors when planning simulations on Vega. Typically it would be wise to run a quick benchmark to understand the scaling behavior for your specific case on your specific hardware.
 
 ---
 Next Topic: [Summary of Vega Hardware/Software](./Appendix_Vega_Reference.md)
