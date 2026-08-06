@@ -1,6 +1,6 @@
 # CFAL Documentation
 
-This repository contains documentation for tools, software, and computing resources used in the Computational Fluid and Aeroacoustics Laboratory (CFAL). It is maintained by lab members and intended for anyone getting started with lab workflows or looking for a reference on specific tools.
+This repository contains documentation for tools, software, and computing resources used in the Computational Fluid and Aerodynamics Laboratory (CFAL) at Embry-Riddle Aeronautical University (formerly at the University of Central Florida). It is maintained by lab members and intended for anyone getting started with lab workflows or looking for a reference on specific tools.
 
 If you notice anything outdated, incorrect, or missing, feel free to contribute or reach out.
 
