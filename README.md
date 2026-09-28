@@ -12,7 +12,7 @@ AI was used to help write this documentation, but all content was reviewed by Ja
 
 Documentation for Vega, the lab's on-premise High Performance Computing cluster. Covers getting started, job submission, and software-specific workflows.
 
-→ [Vega Documentation](./vega/README.md)
+→ [Vega Documentation](./docs/cluster/vega/index.md)
 
 ---
 

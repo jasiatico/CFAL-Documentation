@@ -2,7 +2,8 @@
 
 Traditionally, users accessed Vega via SSH using tools such as MobaXterm or PuTTY. However, **Visual Studio Code (VS Code)** offers a more integrated environment with a built-in terminal, file browser, editor, and many other extensions. This guide covers how to connect to Vega using VS Code. It is not meant to be a comprehensive tutorial on using VS Code, but rather a quick setup guide to get you connected and ready to work on Vega.
 
-> **Note:** Connecting to Vega requires VPN access unless you are on a campus wired network, as well as valid authentication credentials. This guide does not cover VPN or credential setup.
+> [!NOTE]
+> Connecting to Vega requires VPN access unless you are on a campus wired network, as well as valid authentication credentials. This guide does not cover VPN or credential setup.
 
 ---
 

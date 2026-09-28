@@ -2,7 +2,7 @@
 
 A single case run is the simplest Star-CCM+ workflow — one simulation file, one set of conditions, run to completion. Use this when you are running a single configuration or testing a setup before scaling up.
 
-For running multiple cases or parameter sweeps, see [Design Manager](./02_design_manager.md).
+For running multiple cases or parameter sweeps, see [Design Manager](./vega-design-manager.md).
 
 ---
 
@@ -79,4 +79,4 @@ Download or reference the full script here: [`scripts/single_case.sh`](./scripts
 
 ---
 
-Next: [Design Manager](./02_design_manager.md)
+Next: [Design Manager](./vega-design-manager.md)

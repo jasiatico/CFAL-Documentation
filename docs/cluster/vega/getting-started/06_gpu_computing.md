@@ -104,8 +104,9 @@ Look for jobs running on `gpu01` or `gpu02` (the GPU node hostnames). If they ar
 
 ---
 
+> [!TIP]
 > GPU computing on Vega is an evolving area. If you are working with a specific GPU-accelerated tool and need help setting it up, reach out to the lab.
 
 ---
 
-Next: [Star-CCM+ Single Case](../software/starccm/01_single_case.md)
+Next: [Software](../../../software/index.md), for guides and job scripts for specific tools on Vega

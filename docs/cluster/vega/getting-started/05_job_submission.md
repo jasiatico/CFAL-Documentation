@@ -36,6 +36,7 @@ msub my_job_script.sh
 
 Lines beginning with `#PBS` are **directives** — instructions to the scheduler that must appear at the top of the script, before any executable commands. The only exception is the shebang (`#!/bin/bash`), which always comes first.
 
+> [!TIP]
 > **What is a shebang?**
 > The `#!/bin/bash` line tells the system to interpret the script using the bash shell. Different shells (e.g., `zsh`, `tcsh`, `ksh`) have different syntax, and a script written for bash may not behave correctly in another shell. Always include this line.
 
@@ -104,7 +105,7 @@ A typical workflow looks like this:
 5. After completion, copy results back to your home directory.
 6. Clean up the scratch folder to free space.
 
-This pattern is already built into the example job scripts in the [Star-CCM+ section](../software/starccm/01_single_case.md).
+This pattern is already built into the example job scripts in the [Star-CCM+ section](../../../software/starccm/vega-single-case.md).
 
 ---
 

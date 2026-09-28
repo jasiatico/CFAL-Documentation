@@ -1,0 +1,62 @@
+/*
+ * ERAU brand colors
+ *   Royal Blue  PMS 7686 C  #00549A
+ *   Gold        PMS 1225 C  #FFCD4D
+ *
+ * Brand gold is too light to read as text on a white background, so light
+ * mode uses a darker gold for the accent (link hover, focus). Dark mode uses
+ * the brand gold directly and a lighter blue for links.
+ */
+
+:root {
+  --erau-blue: #00549a;
+  --erau-blue-light: #2a74b5;
+  --erau-blue-dark: #003d70;
+  --erau-gold: #ffcd4d;
+  --erau-gold-dark: #9a6f00;
+}
+
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: var(--erau-blue);
+  --md-primary-fg-color--light: var(--erau-blue-light);
+  --md-primary-fg-color--dark: var(--erau-blue-dark);
+  --md-primary-bg-color: #ffffff;
+  --md-accent-fg-color: var(--erau-gold-dark);
+  --md-accent-fg-color--transparent: rgba(154, 111, 0, 0.1);
+  --md-typeset-a-color: var(--erau-blue);
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: var(--erau-blue-dark);
+  --md-primary-fg-color--light: var(--erau-blue);
+  --md-primary-fg-color--dark: #002a4d;
+  --md-primary-bg-color: #ffffff;
+  --md-accent-fg-color: var(--erau-gold);
+  --md-accent-fg-color--transparent: rgba(255, 205, 77, 0.1);
+  --md-typeset-a-color: #7fb2e0;
+}
+
+/* Thin gold rule under the header */
+.md-header {
+  border-bottom: 3px solid var(--erau-gold);
+}
+
+/*
+ * Home page banner (ERAU + Department of Aerospace Engineering + CFAL logo).
+ * The image has an opaque white background, so in dark mode it sits on a
+ * rounded white card instead of showing as a bare white strip.
+ */
+.md-typeset img.cfal-banner {
+  display: block;
+  width: 100%;
+  max-width: 696px;
+  height: auto;
+  margin: 0 auto 1.5rem;
+}
+
+[data-md-color-scheme="slate"] .md-typeset img.cfal-banner {
+  background: #ffffff;
+  padding: 0.6rem 0.8rem;
+  border-radius: 0.4rem;
+  box-sizing: border-box;
+}

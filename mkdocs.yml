@@ -1,0 +1,93 @@
+site_name: CFAL Handbook
+site_description: Lab handbook for the Computational Fluid and Aerodynamics Laboratory (CFAL) at Embry-Riddle Aeronautical University.
+site_url: https://jasiatico.github.io/CFAL-Documentation/
+repo_url: https://github.com/jasiatico/CFAL-Documentation
+repo_name: CFAL-Documentation
+edit_uri: edit/main/docs/
+copyright: >-
+  CC BY 4.0 · CFAL, Embry-Riddle Aeronautical University.
+  Structure adapted from the IMPETUS INDOMITUS team docs.
+
+theme:
+  name: material
+  language: en
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.action.edit
+    - content.code.copy
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - admonition
+  - github-callouts
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - tables
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+
+nav:
+  - Home: index.md
+  - Cluster:
+      - Vega:
+          - Overview: cluster/vega/index.md
+          - Getting Started:
+              - What is Vega?: cluster/vega/getting-started/01_what_is_vega.md
+              - Accessing Vega: cluster/vega/getting-started/02_access_setup.md
+              - Vega Basics: cluster/vega/getting-started/03_vega_basics.md
+              - Resource Planning: cluster/vega/getting-started/04_resource_planning.md
+              - Job Submission: cluster/vega/getting-started/05_job_submission.md
+              - GPU Computing: cluster/vega/getting-started/06_gpu_computing.md
+          - Reference:
+              - Vega Hardware: cluster/vega/reference/vega_hardware.md
+              - Job Script Directives: cluster/vega/reference/job_script_directives.md
+              - Troubleshooting: cluster/vega/reference/troubleshooting.md
+  - Software:
+      - Overview: software/index.md
+      - STAR-CCM+:
+          - Overview: software/starccm/index.md
+          - Single Case on Vega: software/starccm/vega-single-case.md
+          - Design Manager on Vega: software/starccm/vega-design-manager.md
+      - FluidX3D:
+          - Building on Vega: software/fluidx3d/vega-compile.md
+      - FFmpeg:
+          - Overview: software/ffmpeg/index.md
+          - Building on Vega: software/ffmpeg/vega-compile.md
+          - Image Sequences to Video: software/ffmpeg/video-scripts.md

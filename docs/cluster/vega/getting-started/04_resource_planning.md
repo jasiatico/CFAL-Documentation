@@ -17,6 +17,7 @@ To give a sense of how much HPC can change things, here is a rough comparison of
 | Vega (4 nodes) | 2× AMD EPYC 9654 per node | 768 | 6 TB |
 | NASA Pleiades | Mixed | 232,416 | 873 TB |
 
+> [!NOTE]
 > Runtimes are not listed here because they depend heavily on physics, mesh size, and solver settings. The key takeaway is the order-of-magnitude difference in available resources.
 
 ---
