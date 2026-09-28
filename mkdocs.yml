@@ -16,7 +16,6 @@ theme:
   features:
     - navigation.instant
     - navigation.tracking
-    - navigation.sections
     - navigation.top
     - navigation.footer
     - search.suggest
@@ -65,6 +64,33 @@ plugins:
 
 nav:
   - Home: index.md
+  - Getting Started:
+      - Joining the Lab: getting-started/joining-checklist.md
+      - Accounts and Access: getting-started/accounts-and-access.md
+      - Working with Your Advisor: getting-started/working-with-advisor.md
+      - Expectations: getting-started/expectations.md
+  - Undergraduate:
+      - Getting Involved in Research: undergraduate/research-involvement.md
+      - Technical Skills: undergraduate/technical-skills.md
+      - Capstone: undergraduate/capstone.md
+      - Path to Graduate School: undergraduate/path-to-grad.md
+  - Graduate:
+      - Overview: graduate/overview.md
+      - Milestones: graduate/milestones.md
+      - Publishing and Presenting: graduate/publishing.md
+      - Mentorship: graduate/mentorship.md
+  - Papers & Writing:
+      - Academic Writing: writing/academic-writing.md
+      - LaTeX: writing/latex.md
+      - Figures and Visualization: writing/figures.md
+      - Responding to Reviewers: writing/responding-to-reviewers.md
+      - Conferences: writing/conferences.md
+  - Lab:
+      - Workstations: lab/workstations.md
+      - Software Licenses: lab/software-licenses.md
+      - Data Storage: lab/data-storage.md
+      - Code Standards: lab/code-standards.md
+      - Group Policies: lab/policies.md
   - Cluster:
       - Vega:
           - Overview: cluster/vega/index.md
@@ -91,3 +117,4 @@ nav:
           - Overview: software/ffmpeg/index.md
           - Building on Vega: software/ffmpeg/vega-compile.md
           - Image Sequences to Video: software/ffmpeg/video-scripts.md
+  - Contributing: contributing.md

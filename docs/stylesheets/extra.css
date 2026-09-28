@@ -60,3 +60,12 @@
   border-radius: 0.4rem;
   box-sizing: border-box;
 }
+
+/*
+ * Left sidebar: top-level sections (Getting Started, Undergraduate, ...)
+ * are collapsible and start closed. Make their titles read as headings.
+ */
+.md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__link {
+  font-weight: 700;
+  margin-top: 0.75em;
+}
