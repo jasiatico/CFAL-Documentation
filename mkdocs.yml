@@ -6,7 +6,7 @@ repo_name: CFAL-Documentation
 edit_uri: edit/main/docs/
 copyright: >-
   CC BY 4.0 · CFAL, Embry-Riddle Aeronautical University.
-  Structure adapted from the IMPETUS INDOMITUS team docs.
+  Style and structure adapted from the <a href="https://impetus-indomitus-dev.github.io/team-docs/">IMPETUS INDOMITUS team docs</a>.
 
 theme:
   name: material
