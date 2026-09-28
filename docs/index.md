@@ -21,3 +21,11 @@ This is the handbook for the Computational Fluid and Aerodynamics Laboratory (CF
 | [Cluster](cluster/vega/index.md) | Vega: access, job submission, resource planning, scripts |
 | [Software](software/index.md) | CFD solvers (STAR-CCM+, ANSYS, etc.) and other tools, including how to run them on Vega |
 | Contributing | How to fix or add a page |
+
+---
+
+## Acknowledgements
+
+The style and structure of this site are adapted from the [IMPETUS INDOMITUS team docs](https://impetus-indomitus-dev.github.io/team-docs/), the handbook of the IMPETUS INDOMITUS research team at Universidad del Valle. Thank you for sharing such a clear model for a lab handbook.
+
+AI was used to help write this documentation, but all content was reviewed by Jackson Asiatico. If you see any errors or areas for improvement, please let me know. I'm just a PhD student trying to document the things I wish I had known when I started.
