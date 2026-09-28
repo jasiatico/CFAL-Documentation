@@ -2,7 +2,7 @@
 
 Design Manager is used when you want to run multiple Star-CCM+ cases that differ by geometry, boundary conditions, or parameters — such as parameter sweeps, design of experiments (DOE), or optimization studies. Instead of manually submitting each case, Design Manager coordinates and tracks them all within a single job allocation.
 
-For running a single simulation, see [Single Case](./01_single_case.md).
+For running a single simulation, see [Single Case](./vega-single-case.md).
 
 ---
 
@@ -22,6 +22,7 @@ Vega requires the **pre-allocation method**, meaning you request all resources u
 
 For example, if you request 2 nodes (384 cores) and configure Design Manager to run 4 simultaneous jobs at 96 cores each, it will keep up to 4 cases running at a time until all cases in the project are complete.
 
+> [!NOTE]
 > There is an alternative method called General Job Submission where the Design Manager controller submits individual jobs to the scheduler as cases complete. This is not supported on Vega. Documentation for this method is coming soon.
 
 ---
@@ -63,4 +64,4 @@ Download or reference the full script here: [`scripts/design_manager.sh`](./scri
 
 ---
 
-Next: [Vega Hardware Reference](../../reference/vega_hardware.md)
+Next: [Vega Hardware Reference](../../cluster/vega/reference/vega_hardware.md)

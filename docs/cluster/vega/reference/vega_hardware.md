@@ -65,4 +65,5 @@ This page is a short and concise reference for Vega's hardware and software spec
 | ANSYS Fluent | R2310, R2410, R2510 |
 | OpenFOAM | 2.4.0, 1912_220610, 2312 |
 
+> [!NOTE]
 > This list is not exhaustive. Run `module avail` on Vega to see all installed software.

@@ -2,7 +2,7 @@
 
 Vega is the CFAL lab's on-premise High Performance Computing (HPC) cluster, used for large-scale simulations and data processing tasks. This section covers everything you need to get started and run jobs on Vega.
 
-If you are new to Vega, start with [What is Vega?](./getting-started/01_what_is_vega.md) and work through the getting started pages in order before moving on to software-specific guides.
+If you are new to Vega, start with [What is Vega?](./getting-started/01_what_is_vega.md) and work through the getting started pages in order before moving on to the [software guides](../../software/index.md).
 
 ---
 
@@ -19,17 +19,9 @@ If you are new to Vega, start with [What is Vega?](./getting-started/01_what_is_
 
 ---
 
-## Software
+## Running Software on Vega
 
-### Star-CCM+
-| Page | Description |
-|------|-------------|
-| [Single Case](./software/starccm/01_single_case.md) | Running a single simulation |
-| [Design Manager](./software/starccm/02_design_manager.md) | Running parameter sweeps and multi-case studies |
-
-### Coming Soon
-- ANSYS Fluent
-- OpenFOAM
+Guides and job scripts for specific tools (STAR-CCM+, FFmpeg and others) live in the [Software](../../software/index.md) section, next to the rest of each tool's documentation. This section only covers Vega itself.
 
 ---
 
@@ -39,4 +31,4 @@ If you are new to Vega, start with [What is Vega?](./getting-started/01_what_is_
 |------|-------------|
 | [Vega Hardware](./reference/vega_hardware.md) | Full hardware and software specs, per-user limits, queues |
 | [Job Script Directives](./reference/job_script_directives.md) | Complete PBS directives and environment variables |
-| [Troubleshooting](./reference/troubleshooting.md) | Common issues and fixes (coming soon) |
+| [Troubleshooting](./reference/troubleshooting.md) | Common issues and fixes (draft in progress) |

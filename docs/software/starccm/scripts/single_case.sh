@@ -104,10 +104,12 @@ echo "Number of Cores: $PBS_NP" >> stat.out
 # plots from them using a Python script.
 
 # or maybe you want to convert a string of images into a video
-# using ffmpeg.
+# using ffmpeg. The lab's animate.sh script does this in one step;
+# see https://jasiatico.github.io/CFAL-Documentation/software/ffmpeg/video-scripts/
 
 # python plot_results.py results.csv results.png
 # ffmpeg <options> -i image_%04d.png output_video.mp4
+# ~/scripts/animate.sh ./images ./videos
 #################################################################
 
 #################################################################
