@@ -5,7 +5,7 @@
 This is the handbook for the Computational Fluid and Aerodynamics Laboratory (CFAL) at Embry-Riddle Aeronautical University. It collects the guides, references and lab practices we wish we'd had when we started, from joining the lab to running simulations on Vega.
 
 > [!NOTE]
-> This site is being set up. The existing Vega HPC guides are still being moved in, and most sections below are planned but not yet written.
+> This site is new. The Cluster and Software sections are written; most other pages are marked "Draft in progress". If you can help fill one in, see [Contributing](contributing.md).
 
 ---
 
@@ -13,14 +13,14 @@ This is the handbook for the Computational Fluid and Aerodynamics Laboratory (CF
 
 | Section | What you'll find |
 |---|---|
-| Getting Started | Joining the lab, accounts and access, working with your advisor |
-| Undergraduate | Getting involved in research, technical skills, capstone, the path to graduate school |
-| Graduate | Program overview, milestones (qualifier, proposal, defense), publishing, mentorship |
-| Papers & Writing | Academic writing, LaTeX, figures, responding to reviewers |
-| Lab | Workstations, software licenses, data storage, code standards, policies |
+| [Getting Started](getting-started/joining-checklist.md) | Joining the lab, accounts and access, working with your advisor |
+| [Undergraduate](undergraduate/research-involvement.md) | Getting involved in research, technical skills, capstone, the path to graduate school |
+| [Graduate](graduate/overview.md) | Program overview, milestones (qualifier, proposal, defense), publishing, mentorship |
+| [Papers & Writing](writing/academic-writing.md) | Academic writing, LaTeX, figures, responding to reviewers |
+| [Lab](lab/workstations.md) | Workstations, software licenses, data storage, code standards, policies |
 | [Cluster](cluster/vega/index.md) | Vega: access, job submission, resource planning, scripts |
 | [Software](software/index.md) | CFD solvers (STAR-CCM+, ANSYS, etc.) and other tools, including how to run them on Vega |
-| Contributing | How to fix or add a page |
+| [Contributing](contributing.md) | How to fix or add a page |
 
 ---
 
