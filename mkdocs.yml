@@ -113,6 +113,9 @@ nav:
           - Design Manager on Vega: software/starccm/vega-design-manager.md
       - FluidX3D:
           - Building on Vega: software/fluidx3d/vega-compile.md
+      - ParaView:
+          - Overview: software/paraview/index.md
+          - Installing on Vega: software/paraview/vega-install.md
       - FFmpeg:
           - Overview: software/ffmpeg/index.md
           - Building on Vega: software/ffmpeg/vega-compile.md

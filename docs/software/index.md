@@ -20,4 +20,5 @@ If you haven't run a job on Vega before, read the [Vega getting started pages](.
 
 | Tool | What's covered |
 |------|----------------|
+| [ParaView](./paraview/index.md) | Installing your own ParaView in your home directory and running `pvpython` scripts on Vega without a display |
 | [FFmpeg](./ffmpeg/index.md) | Building FFmpeg with H.264 support on Vega, and scripts for turning image sequences into MP4 videos and GIFs |
